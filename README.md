@@ -533,6 +533,10 @@ This scanner is the free, open-source engine behind the [accessibility checks in
 
 On WordPress, the free [Universal Accessibility Audit plugin](https://wordpress.justwhat.net/accessibility-audit/) scans from wp-admin, and [Pro](https://wordpress.justwhat.net/pricing/) adds scheduled full-site scans run by Vinny, history and alerts ([Pro setup](https://wordpress.justwhat.net/docs/pro-setup/)).
 
+## What's new in 0.3.5
+
+- **Fix:** The HTML-to-PDF step opened `file://reports/...` when `--run-dir` was a relative path (an invalid address, so the PDF failed after the HTML was written); it now uses a proper file URL from the absolute path.
+
 ## What's new in 0.3.0
 
 - WCAG 2.2 is the default (`A11Y_WCAG_VERSION=2.1` or `2.0` for older targets).
