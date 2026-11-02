@@ -138,7 +138,7 @@ function main() {
   const auditStartTime = Date.now();
   console.log('');
   console.log(`  ${rainbow('╔══════════════════════════════════════════════════════════╗')}`);
-  console.log(`  ${rainbow('║')}  ${c.bold}${c.brightCyan}♿ Universal Accessibility Audit${c.reset}                       ${rainbow('║')}`);
+  console.log(`  ${rainbow('║')}  ${c.bold}${c.brightCyan}♿ JustWhat Accessibility Audit${c.reset}                        ${rainbow('║')}`);
   console.log(`  ${rainbow('║')}  ${c.dim}WCAG · axe-core · Agentic Lighthouse · Alt Text${c.reset}        ${rainbow('║')}`);
   console.log(`  ${rainbow('╚══════════════════════════════════════════════════════════╝')}`);
   console.log('');

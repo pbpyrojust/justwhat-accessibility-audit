@@ -73,12 +73,12 @@ const runDir = path.resolve(process.cwd(), args['run-dir']);
 const site = args.site || 'the site';
 
 let branding = {
-  companyName: 'Universal Accessibility Audit',
+  companyName: 'JustWhat Accessibility Audit',
   primaryColor: '#7c3aed',
   secondaryColor: '#111827',
   accentColor: '#22c55e',
   reportTitle: 'Accessibility & WCAG Compliance Audit',
-  author: 'Universal Accessibility Audit',
+  author: 'JustWhat Accessibility Audit',
   footerText: 'Confidential report'
 };
 if (args['brand-config']) {

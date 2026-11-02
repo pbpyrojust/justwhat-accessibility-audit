@@ -1,4 +1,4 @@
-# Universal Accessibility Audit
+# JustWhat Accessibility Audit
 
 **Package:** `@pbpyrojust/universal-accessibility-audit`
 **CLI commands:** `universal-a11y-audit`, `uaaudit`
@@ -515,7 +515,7 @@ node scripts/convert-sitemap-xml-to-urls.mjs --input ./saved-sitemap.xml --out .
 
 ## Send results to WordPress
 
-The [Universal Accessibility Audit WordPress plugin](https://wordpress.justwhat.net/accessibility-audit/) ([Pro add-on](https://wordpress.justwhat.net/pricing/)) keeps every run, violation, image alt-text finding and ticket in wp-admin. After a run, send it there:
+The [JustWhat Accessibility Audit WordPress plugin](https://wordpress.justwhat.net/accessibility-audit/) ([Pro add-on](https://wordpress.justwhat.net/pricing/)) keeps every run, violation, image alt-text finding and ticket in wp-admin. After a run, send it there:
 
 ```bash
 UAA_REPORT_URL=https://example.com/wp-json/uaa/v1/runs \
@@ -531,7 +531,7 @@ It sends the newest run in `--reports-dir` (or `--run-dir <dir>`). `--dry-run` p
 
 This scanner is the free, open-source engine behind the [accessibility checks in Vinny](https://vinny.justwhat.net/features/#accessibility). Everything here stays free. [Vinny](https://vinny.justwhat.net) adds, for any website: [scheduled full-site scans](https://vinny.justwhat.net/features/) with history and alerts, [AI fix suggestions](https://vinny.justwhat.net/features/) for alt text and other copy, fix tickets, and [SEO with rank tracking](https://vinny.justwhat.net/features/#seo) ([free for one site](https://vinny.justwhat.net/pricing/)).
 
-On WordPress, the free [Universal Accessibility Audit plugin](https://wordpress.justwhat.net/accessibility-audit/) scans from wp-admin, and [Pro](https://wordpress.justwhat.net/pricing/) adds scheduled full-site scans run by Vinny, history and alerts ([Pro setup](https://wordpress.justwhat.net/docs/pro-setup/)).
+On WordPress, the free [JustWhat Accessibility Audit plugin](https://wordpress.justwhat.net/accessibility-audit/) scans from wp-admin, and [Pro](https://wordpress.justwhat.net/pricing/) adds scheduled full-site scans run by Vinny, history and alerts ([Pro setup](https://wordpress.justwhat.net/docs/pro-setup/)).
 
 ## What's new in 0.3.7
 

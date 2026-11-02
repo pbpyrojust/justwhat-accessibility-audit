@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /**
- * Sends one audit run to the Universal Accessibility Audit WordPress plugin.
+ * Sends one audit run to the JustWhat Accessibility Audit WordPress plugin.
  *
  *   universal-a11y-audit upload --reports-dir reports [--run-dir <dir>]
  *     [--site <url>] [--mode full|quick] [--wcag 2.2] [--trigger manual]

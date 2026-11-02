@@ -33,7 +33,7 @@ Commands:
   tickets               Generate the GitHub/backlog ticket CSV
   visual-report         Generate the branded HTML dashboard + PDF report
   sitemap-xml-to-urls   Convert a browser-saved sitemap XML file into urls.txt
-  upload                Send a finished run to the Universal Accessibility Audit WordPress plugin
+  upload                Send a finished run to the JustWhat Accessibility Audit WordPress plugin
   help                  Show this help
   version               Show package version
 
