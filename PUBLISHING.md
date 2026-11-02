@@ -9,8 +9,8 @@ This repo is configured so you can:
 
 ## Package details
 
-- **npm package:** `@pbpyrojust/universal-accessibility-audit`
-- **CLI commands:** `universal-a11y-audit`, `uaaudit`
+- **npm package:** `@pbpyrojust/justwhat-accessibility-audit`
+- **CLI commands:** `justwhat-a11y-audit`, `uaaudit`
 - **Current version:** see `package.json`
 
 ---
@@ -21,7 +21,7 @@ This repo is configured so you can:
 Your repository should be:
 
 ```text
-https://github.com/pbpyrojust/universal-accessibility-audit
+https://github.com/pbpyrojust/justwhat-accessibility-audit
 ```
 
 ### 2) Verify package metadata
@@ -107,7 +107,7 @@ On npm package settings:
 3. add a **Trusted Publisher**
 4. choose **GitHub Actions**
 5. connect the repository:
-   - `pbpyrojust/universal-accessibility-audit`
+   - `pbpyrojust/justwhat-accessibility-audit`
 
 After that, future publishes can happen from GitHub Actions on version tags.
 
@@ -153,7 +153,7 @@ https://npm.pkg.github.com
 
 GitHub Packages has a few extra rules:
 
-- npm packages published there must be scoped, such as `@pbpyrojust/universal-accessibility-audit`
+- npm packages published there must be scoped, such as `@pbpyrojust/justwhat-accessibility-audit`
 - local publishing requires a classic GitHub personal access token
 - GitHub Actions can publish with `GITHUB_TOKEN` when the package is associated with this repository
 - first-published GitHub Packages may default to private visibility, so confirm the package visibility after the first publish if you want it public
@@ -173,19 +173,19 @@ Or run it manually from GitHub Actions if you prefer.
 
 ### From npmjs.org
 ```bash
-npm install -g @pbpyrojust/universal-accessibility-audit
+npm install -g @pbpyrojust/justwhat-accessibility-audit
 npx playwright install --with-deps chromium
-universal-a11y-audit audit --site https://www.example.com
+justwhat-a11y-audit audit --site https://www.example.com
 ```
 
 ### From source
 ```bash
-git clone https://github.com/pbpyrojust/universal-accessibility-audit.git
-cd universal-accessibility-audit
+git clone https://github.com/pbpyrojust/justwhat-accessibility-audit.git
+cd justwhat-accessibility-audit
 npm install
 npx playwright install --with-deps chromium
-universal-a11y-audit quick --site https://www.example.com
-universal-a11y-audit audit --site https://www.example.com
+justwhat-a11y-audit quick --site https://www.example.com
+justwhat-a11y-audit audit --site https://www.example.com
 ```
 
 ---

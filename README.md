@@ -1,7 +1,9 @@
 # JustWhat Accessibility Audit
 
-**Package:** `@pbpyrojust/universal-accessibility-audit`
-**CLI commands:** `universal-a11y-audit`, `uaaudit`
+> Formerly `@pbpyrojust/universal-accessibility-audit`. That package is deprecated in favour of this one; the old `universal-a11y-audit` command still works here too.
+
+**Package:** `@pbpyrojust/justwhat-accessibility-audit`
+**CLI commands:** `justwhat-a11y-audit`, `uaaudit`
 **Version:** 0.3.0
 
 A CLI toolkit for WCAG accessibility audits and browser-native AI readiness scoring with sitemap discovery, Playwright + axe-core scanning, and ticket-ready outputs. Built for development, staging, protected, and production sites.
@@ -13,7 +15,7 @@ Full-site accessibility audits can take a long time. This tool opens pages in Ch
 For a quick first pass, use `quick` or `--quick`. It scans only top-level URLs by default, applies lite timing limits, and caps the run at 25 pages unless you override `--batch-size`.
 
 ```bash
-npm exec --package @pbpyrojust/universal-accessibility-audit -- universal-a11y-audit quick --site https://www.example.com
+npm exec --package @pbpyrojust/justwhat-accessibility-audit -- justwhat-a11y-audit quick --site https://www.example.com
 ```
 
 For exhaustive work, use `audit` and tune scope with `--batch-size`, `--include-path`, `--exclude-path`, `--top-level`, `--max-path-depth`, `--slow`, `--respect-robots`, and `--cloudflare-aware`.
@@ -52,14 +54,14 @@ npx playwright install --with-deps chromium
 ## Install from npm
 
 ```bash
-npm install -g @pbpyrojust/universal-accessibility-audit
+npm install -g @pbpyrojust/justwhat-accessibility-audit
 npx playwright install --with-deps chromium
 ```
 
 Or run it without a global install:
 
 ```bash
-npm exec --package @pbpyrojust/universal-accessibility-audit -- universal-a11y-audit quick --site https://www.example.com
+npm exec --package @pbpyrojust/justwhat-accessibility-audit -- justwhat-a11y-audit quick --site https://www.example.com
 ```
 
 ## Use in project workflows
@@ -67,7 +69,7 @@ npm exec --package @pbpyrojust/universal-accessibility-audit -- universal-a11y-a
 Install it as a project dev dependency when you want accessibility audits to run from npm scripts, CI jobs, preview deployments, or release checks:
 
 ```bash
-npm install --save-dev @pbpyrojust/universal-accessibility-audit
+npm install --save-dev @pbpyrojust/justwhat-accessibility-audit
 npx playwright install chromium
 ```
 
@@ -76,8 +78,8 @@ Add scripts to your project's `package.json`:
 ```json
 {
   "scripts": {
-    "a11y:quick": "universal-a11y-audit quick --site https://www.example.com",
-    "a11y:full": "universal-a11y-audit audit --site https://www.example.com --respect-robots --batch-size 100"
+    "a11y:quick": "justwhat-a11y-audit quick --site https://www.example.com",
+    "a11y:full": "justwhat-a11y-audit audit --site https://www.example.com --respect-robots --batch-size 100"
   }
 }
 ```
@@ -117,7 +119,7 @@ jobs:
 Run a fast top-level pass:
 
 ```bash
-universal-a11y-audit quick --site https://www.example.com
+justwhat-a11y-audit quick --site https://www.example.com
 ```
 
 Run a full audit:
@@ -135,7 +137,7 @@ pnpm audit --site https://www.example.com
 Or use the installed CLI:
 
 ```bash
-universal-a11y-audit audit --site https://www.example.com
+justwhat-a11y-audit audit --site https://www.example.com
 uaaudit audit --site https://www.example.com
 ```
 
@@ -181,10 +183,10 @@ node scripts/run-audit.mjs --site <url> [options]
 node scripts/run-audit.mjs --site https://www.example.com
 
 # Fast package-style first pass
-universal-a11y-audit quick --site https://www.example.com
+justwhat-a11y-audit quick --site https://www.example.com
 
 # Top-level pages only, but keep the full reporting workflow
-universal-a11y-audit audit --site https://www.example.com --top-level
+justwhat-a11y-audit audit --site https://www.example.com --top-level
 
 # Protected-site conservative scan
 node scripts/run-audit.mjs --site https://www.example.com --slow --respect-robots --cloudflare-aware
@@ -278,7 +280,7 @@ Two environment variables apply to every step (sitemap discovery and the browser
 ```bash
 A11Y_STANDARDS=en301549 \
 A11Y_EXTRA_HEADERS='x-vercel-protection-bypass: <secret>' \
-universal-a11y-audit audit --site https://preview.example.com
+justwhat-a11y-audit audit --site https://preview.example.com
 ```
 
 ### Important security note
@@ -481,9 +483,9 @@ node scripts/run-audit.mjs --site https://www.example.com --lite
 `--quick` is the package-friendly first-pass preset. It uses lite scan settings, keeps top-level URLs only, and caps the default full workflow at 25 pages.
 
 ```bash
-universal-a11y-audit quick --site https://www.example.com
-universal-a11y-audit audit --site https://www.example.com --quick
-universal-a11y-audit scan --crawl --start https://www.example.com --quick --out-dir ./reports
+justwhat-a11y-audit quick --site https://www.example.com
+justwhat-a11y-audit audit --site https://www.example.com --quick
+justwhat-a11y-audit scan --crawl --start https://www.example.com --quick --out-dir ./reports
 ```
 
 ### Generate only the Markdown summary
@@ -520,7 +522,7 @@ The [JustWhat Accessibility Audit WordPress plugin](https://wordpress.justwhat.n
 ```bash
 UAA_REPORT_URL=https://example.com/wp-json/uaa/v1/runs \
 UAA_REPORT_SECRET=<from Accessibility → Settings in the Pro add-on> \
-universal-a11y-audit upload --reports-dir ./reports --site https://www.example.com --mode full --wcag 2.2
+justwhat-a11y-audit upload --reports-dir ./reports --site https://www.example.com --mode full --wcag 2.2
 ```
 
 Where to find the URL and secret: [Pro setup](https://wordpress.justwhat.net/docs/pro-setup/).
@@ -547,7 +549,7 @@ On WordPress, the free [JustWhat Accessibility Audit plugin](https://wordpress.j
 
 ## CLI commands reference
 
-When installed globally via npm, all commands are available through the `universal-a11y-audit` or `uaaudit` CLI:
+When installed globally via npm, all commands are available through the `justwhat-a11y-audit` or `uaaudit` CLI:
 
 | Command | Description |
 |---------|-------------|
@@ -563,16 +565,16 @@ When installed globally via npm, all commands are available through the `univers
 | `version` | Show package version |
 
 ```bash
-universal-a11y-audit audit --site https://www.example.com
-universal-a11y-audit quick --site https://www.example.com
-universal-a11y-audit audit --site https://www.example.com --slow --respect-robots --cloudflare-aware
-universal-a11y-audit audit --site https://www.example.com --brand-config ./branding.json
-universal-a11y-audit build-urls --site https://www.example.com --out ./reports/urls.txt
-universal-a11y-audit scan --urls-file ./reports/urls.txt --out-dir ./reports
-universal-a11y-audit report --run-dir ./reports/<run-id>
-universal-a11y-audit tickets --run-dir ./reports/<run-id>
-universal-a11y-audit visual-report --run-dir ./reports/<run-id> --brand-config ./branding.json
-universal-a11y-audit sitemap-xml-to-urls --input ./saved-sitemap.xml --out ./reports/urls.txt
+justwhat-a11y-audit audit --site https://www.example.com
+justwhat-a11y-audit quick --site https://www.example.com
+justwhat-a11y-audit audit --site https://www.example.com --slow --respect-robots --cloudflare-aware
+justwhat-a11y-audit audit --site https://www.example.com --brand-config ./branding.json
+justwhat-a11y-audit build-urls --site https://www.example.com --out ./reports/urls.txt
+justwhat-a11y-audit scan --urls-file ./reports/urls.txt --out-dir ./reports
+justwhat-a11y-audit report --run-dir ./reports/<run-id>
+justwhat-a11y-audit tickets --run-dir ./reports/<run-id>
+justwhat-a11y-audit visual-report --run-dir ./reports/<run-id> --brand-config ./branding.json
+justwhat-a11y-audit sitemap-xml-to-urls --input ./saved-sitemap.xml --out ./reports/urls.txt
 ```
 
 ## pnpm / npm scripts

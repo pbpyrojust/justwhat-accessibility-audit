@@ -1,5 +1,5 @@
 {
-  "name": "@pbpyrojust/universal-accessibility-audit",
+  "name": "@pbpyrojust/justwhat-accessibility-audit",
   "private": false,
   "type": "module",
   "scripts": {
@@ -15,7 +15,7 @@
     "version:bump": "node scripts/bump-version.mjs",
     "sitemap:xml-to-urls": "node scripts/convert-sitemap-xml-to-urls.mjs",
     "audit:slow": "node scripts/run-audit.mjs --slow --respect-robots --cloudflare-aware",
-    "cli": "node bin/universal-a11y-audit.mjs",
+    "cli": "node bin/justwhat-a11y-audit.mjs",
     "pack:check": "npm pack --dry-run",
     "release:tag": "node -e \"const p=require('./package.json'); console.log('git tag v'+p.version+' && git push origin v'+p.version)\""
   },
@@ -25,20 +25,20 @@
     "fast-xml-parser": "^5.11.2",
     "playwright": "^1.64.1"
   },
-  "version": "0.3.8",
+  "version": "0.3.9",
   "description": "CLI toolkit for WCAG accessibility audits and Agentic Lighthouse scoring with sitemap discovery, Playwright + axe-core scanning, and ticket-ready outputs.",
   "author": "Justin Adams (https://justwhat.net)",
-  "homepage": "https://github.com/pbpyrojust/universal-accessibility-audit#readme",
+  "homepage": "https://github.com/pbpyrojust/justwhat-accessibility-audit#readme",
   "license": "MIT",
   "devDependencies": {
     "husky": "^9.1.7"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/pbpyrojust/universal-accessibility-audit.git"
+    "url": "git+https://github.com/pbpyrojust/justwhat-accessibility-audit.git"
   },
   "bugs": {
-    "url": "https://github.com/pbpyrojust/universal-accessibility-audit/issues"
+    "url": "https://github.com/pbpyrojust/justwhat-accessibility-audit/issues"
   },
   "keywords": [
     "accessibility",
@@ -63,8 +63,9 @@
     "node": ">=20"
   },
   "bin": {
-    "universal-a11y-audit": "bin/universal-a11y-audit.mjs",
-    "uaaudit": "bin/universal-a11y-audit.mjs"
+    "justwhat-a11y-audit": "bin/justwhat-a11y-audit.mjs",
+    "uaaudit": "bin/justwhat-a11y-audit.mjs",
+    "universal-a11y-audit": "bin/justwhat-a11y-audit.mjs"
   },
   "files": [
     "bin/",

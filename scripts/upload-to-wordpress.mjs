@@ -2,7 +2,7 @@
 /**
  * Sends one audit run to the JustWhat Accessibility Audit WordPress plugin.
  *
- *   universal-a11y-audit upload --reports-dir reports [--run-dir <dir>]
+ *   justwhat-a11y-audit upload --reports-dir reports [--run-dir <dir>]
  *     [--site <url>] [--mode full|quick] [--wcag 2.2] [--trigger manual]
  *
  * Reads UAA_REPORT_URL and UAA_REPORT_SECRET from the environment (the
@@ -113,7 +113,7 @@ if (opts["dry-run"]) {
 
 const res = await fetch(url, {
   method: "POST",
-  headers: { "content-type": "application/json", "x-uaa-secret": secret, "user-agent": "universal-accessibility-audit-upload" },
+  headers: { "content-type": "application/json", "x-uaa-secret": secret, "user-agent": "justwhat-accessibility-audit-upload" },
   body: JSON.stringify(body),
 });
 const text = await res.text();

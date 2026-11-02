@@ -19,10 +19,10 @@ function run(script, args) {
 }
 
 function printHelp() {
-  console.log(`universal-a11y-audit
+  console.log(`justwhat-a11y-audit
 
 Usage:
-  universal-a11y-audit <command> [options]
+  justwhat-a11y-audit <command> [options]
 
 Commands:
   audit                 Full workflow: build URLs, scan, summary, ticket/backlog CSV, visual dashboard
@@ -38,23 +38,23 @@ Commands:
   version               Show package version
 
 Examples:
-  universal-a11y-audit audit --site https://www.example.com
-  universal-a11y-audit quick --site https://www.example.com
-  universal-a11y-audit audit --site https://www.example.com --top-level
-  universal-a11y-audit audit --site https://www.example.com --slow --respect-robots --cloudflare-aware
-  universal-a11y-audit audit --site https://www.example.com --brand-config ./branding.json
-  universal-a11y-audit build-urls --site https://www.example.com --out ./reports/urls.txt
-  universal-a11y-audit scan --urls-file ./reports/urls.txt --out-dir ./reports
-  universal-a11y-audit scan --crawl --start https://www.example.com --max-pages 50 --out-dir ./reports
-  universal-a11y-audit scan --crawl --start https://www.example.com --lite --out-dir ./reports
-  universal-a11y-audit audit --site https://www.example.com --lite
-  universal-a11y-audit report --run-dir ./reports/<run-id> --site https://www.example.com
-  universal-a11y-audit tickets --run-dir ./reports/<run-id>
-  universal-a11y-audit visual-report --run-dir ./reports/<run-id> --site https://www.example.com --brand-config ./branding.json
-  universal-a11y-audit sitemap-xml-to-urls --input ./saved-sitemap.xml --out ./reports/urls.txt
-  UAA_REPORT_URL=... UAA_REPORT_SECRET=... universal-a11y-audit upload --reports-dir ./reports --site https://www.example.com
-  universal-a11y-audit audit --site https://staging.example.com --http-username myuser --http-password mypass
-  universal-a11y-audit audit --site https://staging.example.com --auth-config ./auth.local.json
+  justwhat-a11y-audit audit --site https://www.example.com
+  justwhat-a11y-audit quick --site https://www.example.com
+  justwhat-a11y-audit audit --site https://www.example.com --top-level
+  justwhat-a11y-audit audit --site https://www.example.com --slow --respect-robots --cloudflare-aware
+  justwhat-a11y-audit audit --site https://www.example.com --brand-config ./branding.json
+  justwhat-a11y-audit build-urls --site https://www.example.com --out ./reports/urls.txt
+  justwhat-a11y-audit scan --urls-file ./reports/urls.txt --out-dir ./reports
+  justwhat-a11y-audit scan --crawl --start https://www.example.com --max-pages 50 --out-dir ./reports
+  justwhat-a11y-audit scan --crawl --start https://www.example.com --lite --out-dir ./reports
+  justwhat-a11y-audit audit --site https://www.example.com --lite
+  justwhat-a11y-audit report --run-dir ./reports/<run-id> --site https://www.example.com
+  justwhat-a11y-audit tickets --run-dir ./reports/<run-id>
+  justwhat-a11y-audit visual-report --run-dir ./reports/<run-id> --site https://www.example.com --brand-config ./branding.json
+  justwhat-a11y-audit sitemap-xml-to-urls --input ./saved-sitemap.xml --out ./reports/urls.txt
+  UAA_REPORT_URL=... UAA_REPORT_SECRET=... justwhat-a11y-audit upload --reports-dir ./reports --site https://www.example.com
+  justwhat-a11y-audit audit --site https://staging.example.com --http-username myuser --http-password mypass
+  justwhat-a11y-audit audit --site https://staging.example.com --auth-config ./auth.local.json
 
 Primary outputs:
   a11y-violations.csv              Axe/WCAG violating nodes

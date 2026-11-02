@@ -121,7 +121,7 @@ function printBotNotice(site) {
   console.warn("  1) Retry with --slow and --respect-robots");
   console.warn("  2) Use --sitemap-url with a quoted URL if needed");
   console.warn("  3) Save sitemap XML in your browser and convert it with:");
-  console.warn("     universal-a11y-audit sitemap-xml-to-urls --input ./saved-sitemap.xml --out ./urls.txt");
+  console.warn("     justwhat-a11y-audit sitemap-xml-to-urls --input ./saved-sitemap.xml --out ./urls.txt");
   console.warn("  4) Audit using --urls-file ./urls.txt");
   console.warn("Tip: Wait a while before retrying to avoid triggering additional rate limits.\n");
 }
